@@ -1,0 +1,54 @@
+.app-book {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-book > nav {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid silver;
+    position: relative;
+}
+
+.app-book > nav > label {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    transition: var(--transition-app-2);
+}
+
+.app-book > nav > label.active {
+    color: var(--color-blue-app);
+}
+
+.app-book > nav > .slider {
+    position: absolute;
+    height: 4px;
+    border-radius: 12px;
+    background-color: var(--color-blue-app);
+    bottom: -2.5px;
+    left: 0;
+    transition: var(--transition-app-2);
+}
+
+.app-book > section {
+    padding: var(--body-padding);
+}
+
+.app-book > section > div {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.app-book > section > div.active {
+    display: block;
+}

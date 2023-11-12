@@ -1,0 +1,45 @@
+.app-spinner.active {
+    opacity: 1;
+    background-color: var(--background-shadow-app);
+    pointer-events: all;
+}
+
+/* Spinner */
+
+.app-spinner {
+    z-index: 2 !important;
+    opacity: 0;
+    transition: var(--transition-app);
+}
+
+.app-spinner > .content {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: var(--border-radius-app);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow-app);
+}
+
+.app-spinner > .content > span {
+    font-size: 42pt;
+    opacity: .4;
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,36 @@
+.app-alert.active {
+    opacity: 1;
+}
+
+/* Alert */
+
+.app-alert {
+    background-color: var(--background-shadow-app);
+    transition: var(--transition-app);
+    opacity: 0;
+    pointer-events: all;
+}
+
+.app-alert > .content {
+    width: 75%;
+    padding: 10px 5px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-radius-app);
+    display: grid;
+    grid-template-rows: 20px auto;
+    word-break: break-word;
+}
+
+.app-alert > .content > .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-alert > .content > .body {
+    padding: var(--body-padding);
+}

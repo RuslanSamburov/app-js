@@ -1,0 +1,77 @@
+#root {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#root > .app {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 45px auto;
+    font-family: sans-serif;
+    position: relative;
+    z-index: 0;
+}
+
+/* Header */
+
+#root > .app > header {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    padding: 0 10px;
+    box-shadow: var(--box-shadow-app);
+    background-color: white;
+    z-index: 1;
+}
+
+#root > .app > header > div {
+    display: flex;
+    align-items: center;
+}
+
+#root > .app > header > div.after {
+    justify-content: start;
+}
+#root > .app > header > div.center {
+    justify-content: center;
+}
+#root > .app > header > div.before {
+    justify-content: end;
+}
+
+/* Section */
+
+#root > .app > section {
+    background-color: var(--background-body-app);
+    z-index: 0;
+    padding: var(--body-padding);
+    z-index: 0;
+    overflow: auto;
+    position: relative;
+}
+
+/* Footer */
+
+#root > .app > footer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Settings */
+
+#root > .app.app-overlay {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transition: var(--transition-app);
+    left: -100vw;
+}
+
+#root > .app.app-overlay.active {
+    left: 0;
+}

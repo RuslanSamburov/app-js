@@ -1,0 +1,59 @@
+.app-menu.active {
+    background-color: var(--background-shadow-app);
+}
+
+.app-menu.active.full > .content {
+    height: 100%;
+    border-radius: 0;
+}
+
+.app-menu.active > .content {
+    height: 50%;
+}
+
+/* Menu */
+
+.app-menu {
+    pointer-events: all;
+    transition: var(--transition-app);
+}
+
+/* Menu/Content */
+
+.app-menu > .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    border-radius: var(--border-radius-app) var(--border-radius-app) 0 0;
+    display: grid;
+    grid-template-rows: 25px auto;
+    transition: var(--transition-app);
+    overflow: auto;
+}
+
+/* Menu/Header */
+
+.app-menu > .content > .header {
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.app-menu > .content > .header::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 16%;
+    background-color: lightgray;
+    border-radius: var(--border-radius-app);
+}
+
+/* Menu/Body */
+
+.app-menu > .content > .body {
+    padding: var(--body-padding);
+}
